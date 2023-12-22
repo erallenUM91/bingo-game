@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Card 1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+            width: 20%;
+            height: 100px;
+        }
+        .selected {
+            background-color: #add8e6; /* Light blue, change as needed */
+        }
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Impromptu Caroling</td>
+            <td>Holiday Greeting Exchange</td>
+            <td>Children's Holiday Wish List</td>
+            <td>Candy Cane Sighting</td>
+            <td>Santa's Workshop</td>
+        </tr>
+        <tr>
+            <td>Overflowing Shopping Bags</td>
+            <td>Pet in Holiday Attire</td>
+            <td>Matching Family Outfits</td>
+            <td>Hot Beverage Comfort</td>
+            <td>Child Meltdown</td>
+        </tr>
+        <tr>
+            <td>Holiday Music Overload</td>
+            <td>Elves in Action</td>
+            <td>FREE</td>
+            <td>Free Samples</td>
+            <td>Exhausted Mall Employee</td>
+        </tr>
+        <tr>
+            <td>Crowded Parking Lot</td>
+            <td>Festive Window Display</td>
+            <td>Charity Donation Booth</td>
+            <td>Holiday Sale Sign</td>
+            <td>Decor Overdrive</td>
+        </tr>
+        <tr>
+            <td>Happy Family Moment</td>
+            <td>Last-Minute Shopper</td>
+            <td>Mistletoe in Hallway</td>
+            <td>Seasonal Store</td>
+            <td>Seasonal Treats</td>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('td').forEach(function(cell) {
+                cell.addEventListener('click', function() {
+                    this.classList.toggle('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
